@@ -1,3 +1,4 @@
+#These are the fonts for the captcha to generate
 font=["D:\\CAPTCHA\Fonts\\Roboto\\Roboto-Black.ttf",
 "D:\CAPTCHA\Fonts\Grape_Nuts\GrapeNuts-Regular.ttf",
 "D:\CAPTCHA\Fonts\Roboto\Roboto-BoldItalic.ttf",
@@ -63,7 +64,7 @@ font=["D:\\CAPTCHA\Fonts\\Roboto\\Roboto-Black.ttf",
 "D:\CAPTCHA\Fonts\Beau_Rivage\BeauRivage-Regular.ttf",
 "D:\CAPTCHA\Fonts\Babylonica\Babylonica-Regular.ttf",
 ]
-
+#program to generate the capctcha
 from captcha.image import ImageCaptcha
 import string
 import random as rand
@@ -79,6 +80,7 @@ def generateCaptcha(string):
     text.replace(" ","")
     print(text)
     return text
+#generation of mathematical equation
 def equation(size):
     string="".join(rand.choices("0123456789"))
     for i in range(size//2):
@@ -97,6 +99,7 @@ size=rand.randint(0,2)
 img=Image.open('captcha.png')
 i=0
 #size=int(input("Enter no of digits of captcha"))
+#Taking the input and evaluation
 while(True):
     text=""
     i=i+1
